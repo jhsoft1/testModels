@@ -1,0 +1,12 @@
+<form action="{% url 'CleanTastings:valued' eveningwhisky.id %}" method="post">
+{% csrf_token %}
+<fieldset>
+    <legend><h1>{{ eveningwhisky.whisky }}</h1></legend>
+    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+    <label for="nose">nose/Geruch (0-10):</label>
+    <input type="number" id="nose" name="nose" step="0.1" min="0" max="10">
+    <label for="taste">taste/Geschmack (0-10):</label>
+    <input type="number" id="taste" name="taste" step="0.1" min="0" max="10">
+</fieldset>
+<input type="submit" value="Valued!">
+</form>

@@ -1,0 +1,10 @@
+{% if my_todays_tastings_list %}
+    <ul>
+    {% for tasting in my_todays_tastings_list %}
+        <li><a href="{% url 'CleanTastings:detail' tasting.id %}"> {{tasting.evening_whisky.whisky_id}}
+            {{ tasting.nose}} {{tasting.taste}}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}

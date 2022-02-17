@@ -1,9 +1,7 @@
 from django.contrib import admin
 
-from .models import Whisky, User, DateWhisky, DateUser, DateUserWhisky
+from .models import Whisky, Evening, WhiskyTasting
 
 admin.site.register(Whisky)
-admin.site.register(User)
-admin.site.register(DateWhisky)
-admin.site.register(DateUser)
-admin.site.register(DateUserWhisky)
+admin.site.register(Evening)
+admin.site.register(WhiskyTasting)
